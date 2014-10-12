@@ -3,11 +3,35 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ title }}</title>
+		<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="static/css/default.css">
+		
 	</head>
 	<body>
-		<div class="container">
-			Hello {{ name }}
+		<h1>Web Architecture Project<span class="label label-default"></span></h3>
+
+		<div class="centered-box">
+		<form class="form-horizontal" method="POST">
+
+		  <div class="col-lg-12">
+		  <h3>Enter url to shorten<span class="label label-default"></span></h3>
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="http://www.example.com">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="button">Shorten!</button>
+		      </span>
+		    </div>
+		  </div>
+		  <div class="col-lg-12">
+		  <h5>Customize url (Optional)<span class="label label-default"></span></h3>
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="i.e expl">
+		    </div>
+		  </div>
+		  </div>
+
+		</div>
+		</form>
 		</div>
 	</body>
 </html>

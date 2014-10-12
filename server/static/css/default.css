@@ -1,3 +1,26 @@
 html {
 	color: rgba(0, 0, 0, 0.8);
 }
+
+.centered-box {
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  margin-top: -150px;
+  margin-left: -300px;
+}
+body {
+  
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #85794d;
+  background-color: #ced9bc;
+}
+h1{
+   margin-top: 70px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black;
+  text-align: center;
+
+}
