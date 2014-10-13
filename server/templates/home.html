@@ -25,7 +25,7 @@
 		  <div class="col-lg-12">
 		  <h5>Customize url (Optional)<span class="label label-default"></span></h3>
 		    <div class="input-group">
-		      <input type="text" class="form-control" placeholder="i.e expl">
+		      <input type="text" class="form-control" placeholder="i.e expl" id = "shortURL" onkeyup="checkCharOnly(document.getElementById('shortURL').value);">
 		    </div>
 		  </div>
 		  </div>
@@ -34,4 +34,16 @@
 		</form>
 		</div>
 	</body>
+</html>
+
+<html>
+    <script>
+        function checkCharOnly(shortURL) {
+        	if (shortURL.match(/[0-9]/i)) {
+			var response = document.createElement("div");
+			response.textContent = 'Please only use letters';
+			document.body.appendChild(response); 
+		}
+        }
+    </script>
 </html>
