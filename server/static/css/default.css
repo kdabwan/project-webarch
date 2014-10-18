@@ -10,8 +10,30 @@ html {
   margin-top: -150px;
   margin-left: -300px;
 }
+.centered-image {
+  width: 300;
+  height: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
+}
+.fine-print{
+  font-size: 13px;
+  margin-left: 20px;
+  color: red;
+}
+.error-print{
+  font-size: 20px;
+  margin-left: 20px;
+  color: red;
+}
+.shorten-url{
+  font-size: 25px;
+  margin-left: 20px;
+  color: green;
+  font-weight: bold;
+}
 body {
-  
   font-size: 14px;
   line-height: 1.428571429;
   color: #85794d;
@@ -22,5 +44,8 @@ h1{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
   text-align: center;
-
+}
+p{
+  font-family:  Helvetica;
+  text-align: left;
 }
