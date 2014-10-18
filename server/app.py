@@ -5,11 +5,78 @@ from subprocess import check_output
 import flask
 from flask import request
 from os import environ
+from flask import abort
+import random
+import string
 
 app = flask.Flask(__name__)
 app.debug = True
 
 db = shelve.open("shorten.db")
+
+
+
+###
+# For project purpose:
+# POST method, stores url and shorten_url then returns result
+###
+@app.route('/shorts', methods=['POST','GET'])
+def shorts():
+    # POST method
+    if request.method == 'POST':
+        return create_short()
+    # GET method
+    return flask.render_template('shorts.html',
+                                         error= "Error: type your short url. i.e. shorts/name")
+
+
+
+
+def create_short():
+    # retrieve url out the form
+    long_url= request.form.get("long_url").encode('utf-8')
+    # add http:// prefix if it's not there
+    if long_url[:6] != 'http://':
+        long_url = "http://" + long_url
+    # retrieve shorten string
+    short_str = request.form.get("short_str").encode('utf-8')
+    # automaticlly generate short string when it's not sent by form
+    # Extra credit
+    if short_str == '':
+        short_str = get_random_string()
+    # store to database
+    db[short_str]=long_url
+    server_url="http://people.ischool.berkeley.edu/~kdabwan/server/shorts"
+    # return html to /server/shorts
+    return flask.render_template(
+                                 'shorts.html',
+                                 url= server_url + "/" +  short_str)
+
+
+###
+# generate 7 chars long string
+###
+def get_random_string(length=7):
+    SIMPLE_CHARS = string.ascii_letters + string.digits
+    return ''.join(random.choice(SIMPLE_CHARS) for i in xrange(length))
+
+###
+# For project purpose:
+# GET method, redirect to url
+###
+@app.route('/shorts/<short>', methods=['GET'])
+def redirect_short(short):
+    # retrieve short string from url
+    shorten_url = short.encode('utf-8')
+    # check if it's exist in db
+    long_url = db.get(shorten_url,' ')
+    # redirect if it's exist
+    if long_url != ' ':
+        long_url= db[shorten_url]
+        return flask.redirect(long_url)
+    # return 404 if not found
+    abort(404)
+
 
 
 ###
@@ -74,7 +141,7 @@ def i253():
                 '-raise', '30',
                 'png:-']), 200);
     # Comment in to set header below
-    # resp.headers['Content-Type'] = '...'
+    resp.headers['Content-Type'] = request.header['accept']
 
     return resp
 
