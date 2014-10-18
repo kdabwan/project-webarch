@@ -2,32 +2,40 @@
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
-		<title>{{ title }}</title>
+		<title>Web Architecture Project</title>
 		<link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="static/css/default.css">
 		
 	</head>
 	<body>
-		<h1>Web Architecture Project<span class="label label-default"></span></h3>
+		<!-- first non-form tag 1.2 -->
+		<h1>Web Architecture Project</h3>
+		<!-- second non-form tag 1.2 -->
+		<img src="static/url_shortener.png" class="centered-image"></img>
+	
 
 		<div class="centered-box">
-		<form class="form-horizontal" method="POST">
-
+		<form class="form-horizontal" method="POST" action="shorts">
+		<!-- first text field with label 1.1-->
 		  <div class="col-lg-12">
-		  <h3>Enter url to shorten<span class="label label-default"></span></h3>
+		  <label for="long_url">Enter url to shorten<span class="label label-default"></span></label>
 		    <div class="input-group">
-		      <input type="text" class="form-control" placeholder="http://www.example.com">
+		      <input type="text" class="form-control" placeholder="http://www.example.com" id="long_url" name="long_url" >
 		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button">Shorten!</button>
+		        <button class="btn btn-default" type="submit" value="Submit" id = "shortURL" onkeyup="checkCharOnly(document.getElementById('shortURL').value);">Shorten!</button>
 		      </span>
 		    </div>
 		  </div>
+		  <!-- third non-form tag 1.2 -->
+		  <p class="fine-print">* only valid urls</p>
+		  <!-- second text field with label 1.1-->
 		  <div class="col-lg-12">
-		  <h5>Customize url (Optional)<span class="label label-default"></span></h3>
 		    <div class="input-group">
-		      <input type="text" class="form-control" placeholder="i.e expl" id = "shortURL" onkeyup="checkCharOnly(document.getElementById('shortURL').value);">
+		      <label> Customize url (Optional) <input type="text" class="form-control" placeholder="i.e expl" id="customized_url" name="short_str" ></label>
 		    </div>
 		  </div>
+		  <!-- forth non-form tag 1.2 -->
+		  <p class="fine-print">* only valid string</p>
 		  </div>
 
 		</div>
@@ -35,15 +43,14 @@
 		</div>
 	</body>
 </html>
-
 <html>
     <script>
         function checkCharOnly(shortURL) {
         	if (shortURL.match(/[0-9]/i)) {
-			var response = document.createElement("div");
-			response.textContent = 'Please only use letters';
-			document.body.appendChild(response); 
+				var response = document.createElement("div");
+				response.textContent = 'Please only use letters';
+				document.body.appendChild(response); 
 		}
-        }
+     }
     </script>
 </html>
