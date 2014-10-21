@@ -46,11 +46,12 @@ def create_short():
         short_str = get_random_string()
     # store to database
     db[short_str]=long_url
-    server_url="http://people.ischool.berkeley.edu/~kdabwan/server/shorts"
+    server_url="/shorts"
     # return html to /server/shorts
+    
     return flask.render_template(
                                  'shorts.html',
-                                 url= server_url + "/" +  short_str)
+                                 url= request.referrer.replace("/home",server_url) + "/" +  short_str)
 
 
 ###
