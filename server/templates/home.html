@@ -22,7 +22,7 @@
 		    <div class="input-group">
 		      <input type="text" class="form-control" placeholder="http://www.example.com" id="long_url" name="long_url" >
 		      <span class="input-group-btn">
-		        <button class="btn btn-default" type="button" id="button">Shorten! </button>
+		        <button class="btn btn-default" type="submit" value="Submit" id = "shortURL">Shorten! </button>
 		      </span>
 		    </div>
 		  </div>
@@ -31,7 +31,7 @@
 		  <!-- second text field with label 1.1-->
 		  <div class="col-lg-12">
 		    <div class="input-group">
-		      <label> Customize url (Optional) <input type="text" class="form-control" placeholder="i.e expl" id = "shortURL" onkeyup="checkCharOnly(document.getElementById('shortURL').value);"></label>
+		      <label> Customize url (Optional) <input type="text" class="form-control" placeholder="i.e expl" id ="customized_url" name="short_str"  onkeyup="checkCharOnly(document.getElementById('customized_url').value);"></label>
 		    </div>
 		  </div>
 		  <!-- forth non-form tag 1.2 -->
@@ -47,13 +47,13 @@
 
 <html>
     <script>
-        function checkCharOnly(shortURL) {
+        function checkCharOnly(customized_url) {
         	var chars = /^[A-Za-z]*$/;
-        	if (chars.test(shortURL)) {
+        	if (chars.test(customized_url)) {
 				document.getElementById('errorMessage').innerHTML = '';
-				document.getElementById("button").disabled = false;
+				document.getElementById("shortURL").disabled = false;
 			}else{
-				document.getElementById("button").disabled = true;	
+				document.getElementById("shortURL").disabled = true;	
 				document.getElementById('errorMessage').innerHTML = 'Please only use Letters';		
 			}
 		}
