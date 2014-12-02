@@ -1,21 +1,36 @@
 html {
   color: rgba(0, 0, 0, 0.8);
 }
+.sign-area {
+  top: 0px;
+  margin-top: 1%;
+  margin-right: 1%;
+  text-align:right;
 
+}
 .centered-box {
-  position: fixed; 
-  top: 50%;
-  left: 50%;
-  width: 800px;
-  margin-top: -150px;
-  margin-left: -300px;
+  width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
 }
 .centered-image {
-  width: 300;
-  height: 70px;
+  width: 25%;
+  height: 15%;
   display: block;
+  margin-top: 1%;
   margin-left: auto;
   margin-right: auto 
+}
+.centered-qrcode {
+  width: 15%;
+  height: 15%;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto ;
 }
 .fine-print{
   font-size: 13px;
@@ -27,12 +42,96 @@ html {
   margin-left: 20px;
   color: red;
 }
-.shorten-url{
-  font-size: 25px;
-  margin-left: 20px;
-  color: green;
-  font-weight: bold;
+.shorten-url
+{
+    font-size: 160%;
+    color: green;
+    font-weight: bold;
+    width:300px;
+    height:400px;
+    white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+
 }
+.modal-header-success {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-danger {
+  color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-footer{
+  text-align: center;
+}
+.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background:#5BB75B;
+    color: white;
+}
+.dropdown {
+    margin-top: 10px;
+    margin-left: 10px;
+    color:#5BB75B;
+    border:2px solid #5BB75B;
+    border-radius:8px;
+    width:180px;    
+}
+.dropdown-menu>li>a {
+    color:#5BB75B;
+}
+.dropdown ul.dropdown-menu {
+    border-radius:7px;
+    box-shadow:none;
+    margin-top:20px;
+    width:180px;
+}
+.dropdown ul.dropdown-menu:before {
+   
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -5px;
+    right: 86px;
+    z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -5px;
+    right: 84px;
+    z-index: 9;
+}
+.navbar-login
+{
+
+    width: 180px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
 body {
   font-size: 14px;
   line-height: 1.428571429;
@@ -40,7 +139,7 @@ body {
   background-color: #ced9bc;
 }
 h1{
-   margin-top: 70px;
+   margin-top: 30px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: black;
   text-align: center;
@@ -49,3 +148,95 @@ p{
   font-family:  Helvetica;
   text-align: left;
 }
+
+@media screen and (max-width: 640px) {
+               .centered-box {
+                  width: 95%;
+                    position: fixed;
+                    top: 30%;
+                }
+                .centered-image {
+                    width: 50%;
+                    height: 40%;
+                  }
+                  h1{
+                     margin-top: 10%;
+                     font-size: 200%;
+                  }
+                  .fine-print{
+                    font-size: 10px;
+                  }
+                  .shorten-url{
+                font-size: 100%;
+              }
+              .shorten-url{
+                    font-size: 160%;
+                    color: green;
+                    font-weight: bold;
+                    width:300px;
+                    height:400px;
+                    white-space: pre-wrap; /* css-3 */    
+                    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+                    white-space: -pre-wrap; /* Opera 4-6 */    
+                    white-space: -o-pre-wrap; /* Opera 7 */    
+                    word-wrap: break-word; /* Internet Explorer 5.5+ */
+
+                }
+                .dropdown {
+                    width:170px; 
+                    margin-right: 20px;
+                    background: white;  
+                }
+                
+                .dropdown .dropdown-menu:before {
+                    border-bottom: 0px solid black;
+                    border-right: 0px solid black;
+                    border-left: 0px solid black;
+                    position: absolute;
+                    top: -10px;
+                    right: 86px;
+                    z-index: 10;
+                }
+                .dropdown .dropdown-menu:after {
+              
+                  border-bottom: 0px solid black;
+                    border-right: 0px solid black;
+                    border-left: 0px solid black;
+                    position: absolute;
+                    top: -10px;
+                    right: 86px;
+                    z-index: 10;
+              }
+               
+              .dropdown-menu{
+            
+              color:white;
+              font-size: 10px;
+              }
+              .navbar-login
+              {
+                margin-left: 20px;
+                  width: 142px;
+                  padding: 10px;
+                  padding-bottom: 0px;
+              }
+             tr{
+              color: white;
+              background: white;
+             }
+   }           
+@media screen and (max-height: 640px) {
+               .centered-box {
+                 top: 40%;
+                }
+                .sign-area {
+                  margin-top: -20px;
+
+                }
+                
+                
+            }
+
+
+       
+

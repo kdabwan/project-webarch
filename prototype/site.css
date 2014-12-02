@@ -1,0 +1,62 @@
+H1, H2, H3 {
+    text-align:center; 
+    color:#404040; 
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 200%;} 
+
+H2, a{
+	font-size:150%;
+	color:#007A7A;
+	text-align: center;
+}
+
+H3{
+	font-size: 100%;
+}
+
+p{
+	text-align: center;
+}
+
+#button {
+	font-size: 100%;
+	color:#007A7A;
+	font-weight: lighter;
+}
+
+#title {
+	margin-bottom: 100px;
+}
+
+#button{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    width: 200px;
+}
+
+#login{
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    width: 300px;
+    text-align: center;
+}
+
+
+  #map-canvas {
+    width: 500px;
+    height: 400px;
+    background-color: #CCC;
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+
+body {
+    background-color: #CCEBF5;
+} 
+
+
