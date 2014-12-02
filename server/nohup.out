@@ -1,0 +1,705 @@
+ * Running on http://127.0.0.1:63012/
+ * Restarting with reloader
+127.0.0.1 - - [30/Oct/2014 17:52:28] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 17:52:28] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:28] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:28] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:30] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 17:52:30] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:30] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:30] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:50] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 17:52:50] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:50] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:50] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 17:52:52] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 17:52:56] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:05:47] "GET /shorts HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:04] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:14] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:15] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:15] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:15] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:15] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:16] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:17] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:06:18] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:08:19] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:15:29] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 18:15:29] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 18:15:29] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 18:15:29] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 18:15:50] "POST /shorts HTTP/1.1" 200 -
+--------------------------------------------------------------------------------
+DEBUG in app [app.py:83]:
+redirect to http://en.wikipedia.org/wiki/Longest_common_subsequence_problem
+--------------------------------------------------------------------------------
+127.0.0.1 - - [30/Oct/2014 18:15:52] "GET /shorts/pvrpDDXwOy HTTP/1.1" 302 -
+127.0.0.1 - - [30/Oct/2014 19:01:29] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:01:29] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 19:01:29] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 19:01:29] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 19:40:30] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:40:30] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:40:30] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:40:31] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:56:40] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:57:16] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 19:57:18] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 20:13:54] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 20:13:54] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 20:13:55] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 20:13:55] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 20:14:10] "POST /shorts HTTP/1.1" 200 -
+--------------------------------------------------------------------------------
+DEBUG in app [app.py:83]:
+redirect to http://www.google.com
+--------------------------------------------------------------------------------
+127.0.0.1 - - [30/Oct/2014 20:14:13] "GET /shorts/SKETCHY HTTP/1.1" 302 -
+127.0.0.1 - - [30/Oct/2014 20:20:32] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 21:12:16] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 21:12:16] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 21:12:16] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 21:12:16] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 22:02:20] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 22:02:21] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 22:02:21] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 22:02:21] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 23:23:06] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 23:23:06] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 23:23:06] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 23:23:06] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 23:41:57] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [30/Oct/2014 23:41:57] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 23:41:57] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [30/Oct/2014 23:41:57] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [31/Oct/2014 08:01:56] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 12:47:14] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 12:47:14] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [31/Oct/2014 12:47:14] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [31/Oct/2014 12:47:14] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [31/Oct/2014 13:42:03] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 13:42:03] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 13:42:03] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 13:42:03] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 13:43:06] "POST /shorts HTTP/1.1" 200 -
+--------------------------------------------------------------------------------
+DEBUG in app [app.py:83]:
+redirect to http://people.ischool.berkeley.edu/~kdabwan/server/home
+--------------------------------------------------------------------------------
+127.0.0.1 - - [31/Oct/2014 13:43:09] "GET /shorts/nETUICUPEL HTTP/1.1" 302 -
+127.0.0.1 - - [31/Oct/2014 13:43:09] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 15:28:15] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [31/Oct/2014 15:28:15] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [31/Oct/2014 15:28:15] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [31/Oct/2014 15:28:15] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 08:49:17] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2014 08:49:17] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 08:49:17] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 08:49:17] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 15:26:29] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2014 15:26:29] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 15:26:29] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 15:26:29] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 18:34:16] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2014 18:34:16] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 18:34:16] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/Nov/2014 18:34:16] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [02/Nov/2014 10:24:29] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [02/Nov/2014 10:24:29] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [02/Nov/2014 10:24:29] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [02/Nov/2014 10:24:29] "GET /static/css/default.css HTTP/1.1" 304 -
+ * Running on http://127.0.0.1:63012/
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 12:58:51] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 12:58:51] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 12:58:51] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 12:58:51] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:02:51] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:03:09] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:03:17] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:30:08] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:30:55] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:30:55] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:30:55] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:30:55] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:30:58] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:30:58] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:30:58] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:30:58] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:40] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:31:40] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:31:40] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:40] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:42] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:31:42] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:42] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:42] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:53] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:31:53] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:31:53] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:53] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:31:54] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:31:54] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:32:33] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:32:44] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:37:08] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:37:08] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:37:08] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:37:08] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:37:16] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:41:55] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:41:55] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:41:55] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:41:55] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:01] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:42:31] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:42:31] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:42:31] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:31] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:33] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:42:33] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:33] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:33] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:37] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:42:38] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:42:38] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:38] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:42:43] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:43:48] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:43:48] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:43:48] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:43:48] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:43:53] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:16] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:17] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:17] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:44:17] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:44:26] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:26] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:26] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:44:26] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:44:31] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:52] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:52] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:44:52] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:44:52] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:45:00] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:45:00] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:45:00] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:45:00] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:45:07] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:45:07] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:45:07] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:45:07] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:45:28] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:45:28] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:45:28] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:45:28] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:46:02] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:46:02] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:46:02] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:46:02] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:46:09] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:46:14] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:46:22] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:46:28] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:46:34] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:47:30] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:47:30] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:47:30] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:47:30] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:47:41] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:47:41] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:47:41] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:47:41] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 13:47:50] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 13:47:57] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:07] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:07] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:07] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:07] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:32] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:32] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:46] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:46] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:46] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:46] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:49] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:02:49] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:49] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:02:49] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:03] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:04:03] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:03] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:03] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:05] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:04:05] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:05] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:06] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:09] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 14:04:09] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:09] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 14:04:09] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:20] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:20:20] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:20] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:20] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:31] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:20:31] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:32] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:32] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:34] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:20:34] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:34] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:20:34] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:21:25] "POST /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:21:42] "POST /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:21:42] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:21:42] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:21:42] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:22:05] "POST /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:05] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:22:05] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:22:05] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:22:14] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:16] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:16] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:16] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:16] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:19] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:19] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:19] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:20] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:22:43] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:23:05] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:23:05] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:23:05] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:23:06] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:25:41] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:25:43] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:25:43] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:25:43] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:25:44] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:25:46] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:25:46] "GET /static/css/default.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:25:46] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:25:47] "GET /static/url_shortener.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:31:24] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:31:24] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:31:24] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:31:24] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:01] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:33:01] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:01] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:01] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:19] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:33:19] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:19] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:19] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:21] "GET /home.html HTTP/1.1" 404 -
+127.0.0.1 - - [29/Nov/2014 17:33:29] "GET /home.html HTTP/1.1" 404 -
+127.0.0.1 - - [29/Nov/2014 17:33:43] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:33:43] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:43] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:43] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:33:47] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:39:02] "GET /login HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1264, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1262, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1248, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/kdabwan/project-webarch/server/app.py", line 80, in login
+    return flask.render_template("login.html")
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 122, in render_template
+    return _render(ctx.app.jinja_env.get_template(template_name),
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 719, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 693, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/lib/python2.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/lib/python2.7/site-packages/flask/templating.py", line 61, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: login.html
+127.0.0.1 - - [29/Nov/2014 17:39:02] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:39:02] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:39:02] "GET /login?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:39:03] "GET /login?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:39:03] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:39:03] "GET /login?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 17:40:03] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:40:56] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:40:56] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:40:56] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:41:25] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:41:25] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:41:25] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:03] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:42:03] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:03] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:14] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:42:14] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:14] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:41] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:42:41] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:41] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:43] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:42:43] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:42:43] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:05] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:43:05] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:05] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:18] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:43:18] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:18] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:26] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:43:27] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:27] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:48] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:43:48] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:43:48] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:44:12] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:44:12] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:44:12] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:45:23] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:45:23] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:45:23] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:46:10] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:46:10] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:46:10] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:47:19] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:47:19] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:47:19] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:48:26] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:48:27] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:48:27] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:49:11] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:49:11] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:49:11] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:49:40] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:49:40] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:49:40] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:49:51] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:49:51] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:49:51] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:50:08] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:50:08] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 17:50:08] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 17:51:05] "GET /login HTTP/1.1" 404 -
+127.0.0.1 - - [29/Nov/2014 17:51:10] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:51:13] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 17:52:14] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+  File "app.py", line 102
+    try: # query user
+    ^
+IndentationError: unexpected indent
+ * Running on http://127.0.0.1:63012/
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:04:50] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:18] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:05:56] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:06:36] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:06:36] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:06:36] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:06:36] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:06:37] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:06:37] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:06:37] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:45] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:07:47] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1518, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1506, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1504, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1265, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1332, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:08:49] "GET /profile?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 18:09:26] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 18:09:26] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 18:09:26] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 18:09:26] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 18:09:26] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:11:27] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:11:30] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:30:16] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:30:16] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:30:16] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:30:16] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:30:18] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:30:23] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:32:20] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:32:20] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:32:20] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:32:20] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:32:23] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:33:57] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:37:23] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:38:38] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:38:38] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:38:38] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:38:38] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:38:41] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:38:44] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:39:27] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:39:33] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:39:55] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:39:55] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:39:55] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:39:55] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:39:57] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:40:15] "GET /home HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:40:15] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:40:15] "GET /static/url_shortener.png HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:40:15] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:40:17] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:43:56] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:43:56] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:43:56] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:44:19] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:44:19] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:44:19] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:51:10] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:51:10] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:51:10] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:51:26] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:51:26] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:51:26] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:52:36] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:52:36] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:52:36] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:53:41] "POST /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:53:44] "POST /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:53:44] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:53:45] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:53:56] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:54:25] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:54:25] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:54:25] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 19:54:45] "POST /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 19:55:03] "POST /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 19:55:04] "GET /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+  File "app.py", line 106
+    return flask.render_template('profile.html')
+         ^
+SyntaxError: invalid syntax
+ * Running on http://127.0.0.1:63012/
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 20:16:36] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:16:44] "POST /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 20:32:24] "POST /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:32:27] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:32:35] "POST /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:32:37] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:32:47] "POST /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+  File "app.py", line 108
+    cur.execute(""sql"",update_data)
+                    ^
+SyntaxError: invalid syntax
+ * Running on http://127.0.0.1:63012/
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 20:34:52] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:34:52] "GET /static/css/default.css HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 20:34:52] "GET /static/bootstrap/js/jquery.cookie.js HTTP/1.1" 304 -
+127.0.0.1 - - [29/Nov/2014 20:34:59] "POST /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+127.0.0.1 - - [29/Nov/2014 20:35:52] "POST /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:35:54] "GET /profile HTTP/1.1" 200 -
+127.0.0.1 - - [29/Nov/2014 20:36:00] "POST /profile HTTP/1.1" 200 -
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Detected change in 'app.py', reloading
+ * Restarting with reloader
+ * Running on http://127.0.0.1:63012/
+Traceback (most recent call last):
+  File "app.py", line 252, in <module>
+    app.run(port=int(environ['FLASK_PORT']))
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 703, in run
+    run_simple(host, port, self, **options)
+  File "/usr/lib/python2.7/site-packages/werkzeug/serving.py", line 613, in run_simple
+    test_socket.bind((hostname, port))
+  File "/usr/lib64/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
