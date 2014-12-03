@@ -224,6 +224,16 @@ def home():
     return flask.render_template(
             'home.html')
 
+@app.route('/map', methods=['GET'])
+def map():
+    latitude= [10,20,30]
+    longitude= [-80, -80, -80]
+    numAddresses = [50000, 2340000, 23409230]
+    avgLat = sum(latitude)/len(latitude)
+    avgLong = sum(longitude)/len(longitude)
+    return flask.render_template(
+            'map.html', latitude= latitude, longitude= longitude, numAddresses = numAddresses, avgLat = avgLat, avgLong = avgLong)
+
 @app.route('/home', methods=['POST'])
 def home_post():
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
