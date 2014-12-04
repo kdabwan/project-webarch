@@ -31,9 +31,9 @@
 		<img src="static/url_shortener.png" class="centered-image" alt="logo">
 		
 			<h2>Shorten url:</h2>
-			<a href="{{url}}" class="shorten-url" id="short_url">{{url}}</a>
+			<a href="" class="shorten-url" id="short_url">{{url}}</a>
 			<p class="error-print">{{error}}</p>
-			<div id="qrcode" align="center"></div>
+			<div id="qrcode" class="qrcode"></div>
 		
 		
 		</div>
@@ -41,11 +41,17 @@
 		<script type="text/javascript">
 				$(document).ready(function() {
 					var url = $("#short_url").text();
-				    $("#qrcode").qrcode(
+					if (url != "") {
+						$("#short_url").attr("href", url);
+					$("#qrcode").qrcode(
 				        {
 				            text: url
 				        }
-				    )
+					
+					)
+					};
+					
+				    
 				    if($.cookie('username') === null || $.cookie('username') === "" 
 					|| $.cookie('username') === "null" || $.cookie('username') === undefined)
 						{

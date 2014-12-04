@@ -132,6 +132,9 @@ html {
     padding-bottom: 0px;
 }
 .error { color: #CC0000; }
+.qrcode{
+  text-align: center;
+}
 body {
   font-size: 14px;
   line-height: 1.428571429;
@@ -230,6 +233,4 @@ p{
                  top: 40%;
                 }
                 .sign-area {
-                  margin-top: -20px;
-
-                }
+                  margin-top: 

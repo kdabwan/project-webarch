@@ -18,7 +18,7 @@
 	<body>
 	   <div class="content">
     <!--Sign in/up business starts here .............................-->
-    <div class="sign-area" align="right" id="sign-area">
+    <div class="sign-area"  id="sign-area">
     </div>
 
                 <div class="centered-box" style="width:30%">
@@ -28,25 +28,25 @@
                 <!-- Sign Up Form -->
                   <!-- Text input-->
                 <div class="control-group">
-                  <label class="control-label" for="Email">First Name:</label>
+                  <label class="control-label" for="firstname">First Name:</label>
                   <div class="controls">
-                    <input id="firstname" name="firstname" class="form-control" type="text"  class="input-large" required="" value='{{firstname}}'>
+                    <input id="firstname" name="firstname" class="form-control input-large" type="text"   required="" value='{{firstname}}'>
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="control-group">
-                  <label class="control-label" for="Email">Last Name:</label>
+                  <label class="control-label" for="lastname">Last Name:</label>
                   <div class="controls">
-                    <input id="lastname" name="lastname" class="form-control" type="text"  class="input-large" required="" value='{{lastname}}'>
+                    <input id="lastname" name="lastname" class="form-control input-large" type="text"   required="" value='{{lastname}}'>
                   </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="control-group">
-                  <label class="control-label" for="Email">Email:</label>
+                  <label class="control-label" for="email">Email:</label>
                   <div class="controls">
-                    <input id="email" name="email" class="form-control" type="text"  class="input-large" required="" value='{{email}}'>
+                    <input id="email" name="email" class="form-control input-large" type="email"   required="" value='{{email}}'>
                   </div>
                 </div>
                 
@@ -54,7 +54,7 @@
                 <div class="control-group">
                   <label class="control-label" for="password">Current password:</label>
                   <div class="controls">
-                    <input id="password" name="password" class="form-control" type="password"  placeholder="********" class="input-large" required="">
+                    <input id="password" name="password" class="form-control input-large" type="password"  placeholder="********"  required="">
                     <em>Enter your password to update </em>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="control-group">
                   <label class="control-label" for="newpassword">New password:</label>
                   <div class="controls">
-                    <input id="password" name="newpassword" class="form-control" type="password" placeholder="********" class="input-large" >
+                    <input id="newpassword" name="newpassword" class="form-control input-large" type="password" placeholder="********"  >
                     <em>1-8 Characters</em>
                   </div>
                 </div>
@@ -71,7 +71,7 @@
                 <div class="control-group">
                   <label class="control-label" for="reenterpassword">Re-Enter new password:</label>
                   <div class="controls">
-                    <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" >
+                    <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  >
                   </div>
                 </div>
          
@@ -91,7 +91,7 @@
   
     <!-- Dialog-->
       <!-- Modal -->
-      <div class="modal fade bs-modal-sm" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade bs-modal-sm" id="success" tabindex="-1" role="dialog"  aria-hidden="true">
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header modal-header-success">
@@ -109,7 +109,7 @@
       </div><!-- /.modal -->
 
     <!-- Modal -->
-      <div class="modal fade bs-modal-sm" id="fail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade bs-modal-sm" id="fail" tabindex="-1" role="dialog" aria-hidden="true">
           <div class="modal-dialog ">
               <div class="modal-content">
                   <div class="modal-header modal-header-danger">

@@ -42,9 +42,9 @@
 		            <!-- Sign In Form -->
 		            <!-- Text input-->
 		            <div class="control-group">
-		              <label class="control-label" for="userid">Username:</label>
+		              <label class="control-label" for="username-signin">Username:</label>
 		              <div class="controls ">
-		                <input required="" id="username" name="username" type="text" class="form-control input-medium" placeholder="username"  >
+		                <input required="" id="username-signin" name="username" type="text" class="form-control input-medium" placeholder="username"  >
 		              </div>
 		            </div>
 
@@ -98,7 +98,7 @@
 		            <div class="control-group">
 		              <label class="control-label" for="username">Username:</label>
 		              <div class="controls">
-		                <input id="username" name="username" class="form-control input-large" type="text" placeholder="username"  required="" minlength="5">
+		                <input id="username" name="username" class="form-control input-large" type="text" placeholder="username"  required="" pattern=".{5,}" title="5 characters minimum">
 		              </div>
 		            </div>
 		            
@@ -106,7 +106,7 @@
 		            <div class="control-group">
 		              <label class="control-label" for="password">Password:</label>
 		              <div class="controls">
-		                <input id="password" name="password" class="form-control input-large" type="password" placeholder="********"  required="">
+		                <input id="password" name="password" class="form-control input-large" type="password" placeholder="********"  required="" pattern=".{6,}" title="6 characters minimum">
 		                <em>1-8 Characters</em>
 		              </div>
 		            </div>
@@ -115,7 +115,7 @@
 		            <div class="control-group">
 		              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
 		              <div class="controls">
-		                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  required="" minlength="5" equalTo="#password">
+		                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  required="" pattern=".{6,}" title="6 characters minimum">
 		              </div>
 		            </div>
 		     
@@ -279,28 +279,8 @@
 				              location.reload(true);
 				              return false; 
 				            });
-				            $.validator.addMethod("notEqualTo", function (value, element, param)
-								{
-								    var target = $(param);
-								    if (value) return value != target.val();
-								    else return this.optional(element);
-								}, "Repeated field");
-				            $("#signup-form").validate({
-							    messages: {
-							        username: {
-							            minlength: "Username at least 5 Characters"
-							        },
-							        password: {
-							            minlength: "Password at least 5 Characters"
-							        },
-							        reenterpassword: {
-							            minlength: "Password at least 5 Characters",
-							            equalTo: "Password fields have to match"
-							        },
-							        email: {
-							            email: "Check the format!"							        }
-							    }
-							});
+				      
+				          
 						
 		    });
     	</script>
