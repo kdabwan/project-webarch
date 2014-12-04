@@ -13,6 +13,7 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 		<script src="./static/bootstrap/js/jquery.cookie.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div class="content">
@@ -66,7 +67,7 @@
 		            </form>
 		        </div>
 		        <div class="tab-pane fade" id="signup">
-		            <form class="form-horizontal" method="POST">
+		            <form class="form-horizontal" method="POST" id="signup-form">
 		            <fieldset>
 		            <!-- Sign Up Form -->
 		              <!-- Text input-->
@@ -89,15 +90,15 @@
 		            <div class="control-group">
 		              <label class="control-label" for="email">Email:</label>
 		              <div class="controls">
-		                <input id="email" name="email" class="form-control input-large" type="text" placeholder="name@example.com" required="">
+		                <input id="email" name="email" class="form-control input-large" type="email" placeholder="name@example.com" required="">
 		              </div>
 		            </div>
 		            
 		            <!-- Text input-->
 		            <div class="control-group">
-		              <label class="control-label" for="userid">Username:</label>
+		              <label class="control-label" for="username">Username:</label>
 		              <div class="controls">
-		                <input id="userid" name="username" class="form-control input-large" type="text" placeholder="username"  required="">
+		                <input id="username" name="username" class="form-control input-large" type="text" placeholder="username"  required="" minlength="5">
 		              </div>
 		            </div>
 		            
@@ -114,7 +115,7 @@
 		            <div class="control-group">
 		              <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
 		              <div class="controls">
-		                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  required="">
+		                <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  required="" minlength="5" equalTo="#password">
 		              </div>
 		            </div>
 		     
@@ -278,6 +279,28 @@
 				              location.reload(true);
 				              return false; 
 				            });
+				            $.validator.addMethod("notEqualTo", function (value, element, param)
+								{
+								    var target = $(param);
+								    if (value) return value != target.val();
+								    else return this.optional(element);
+								}, "Repeated field");
+				            $("#signup-form").validate({
+							    messages: {
+							        username: {
+							            minlength: "Username at least 5 Characters"
+							        },
+							        password: {
+							            minlength: "Password at least 5 Characters"
+							        },
+							        reenterpassword: {
+							            minlength: "Password at least 5 Characters",
+							            equalTo: "Password fields have to match"
+							        },
+							        email: {
+							            email: "Check the format!"							        }
+							    }
+							});
 						
 		    });
     	</script>
