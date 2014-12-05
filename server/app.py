@@ -94,12 +94,17 @@ def get_ip(request):
 ###
 @app.route('/shorts/<short>', methods=['GET'])
 def redirect_short(short):
+    latitude= [10,20,30]
+    longitude= [-80, -80, -80]
+    numAddresses = [50000, 2340000, 23409230]
+    avgLat = sum(latitude)/len(latitude)
+    avgLong = sum(longitude)/len(longitude)
     if short[len(short)-1] == '_':
         db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
         cur = db.cursor()
         cur.execute("SELECT * FROM clicks WHERE short_id = '%s'" % short[0:len(short)-1])
         short_stats = cur.fetchall()
-        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats)
+        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats, latitude= latitude, longitude= longitude, numAddresses = numAddresses, avgLat = avgLat, avgLong = avgLong)
 
     # retrieve short string from url
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
@@ -224,15 +229,6 @@ def home():
     return flask.render_template(
             'home.html')
 
-@app.route('/map', methods=['GET'])
-def map():
-    latitude= [10,20,30]
-    longitude= [-80, -80, -80]
-    numAddresses = [50000, 2340000, 23409230]
-    avgLat = sum(latitude)/len(latitude)
-    avgLong = sum(longitude)/len(longitude)
-    return flask.render_template(
-            'map.html', latitude= latitude, longitude= longitude, numAddresses = numAddresses, avgLat = avgLat, avgLong = avgLong)
 
 @app.route('/home', methods=['POST'])
 def home_post():

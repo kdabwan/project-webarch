@@ -180,6 +180,18 @@ p{
   padding-bottom: 15px;
 }
 
+.row-spacer{
+    margin-top:40px;
+}
+
+#map-canvas {
+      width: 700px;
+      height: 500px;
+      margin-right: auto;
+      margin-left: auto;
+
+    }
+
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
     background-color: #6fb1c9;
