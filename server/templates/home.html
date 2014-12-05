@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="static/css/default.css">
+		<link href="static/css/default.css" rel="stylesheet" >
 
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -181,13 +181,13 @@
 		
 		<!-- first non-form tag 1.2 -->
 		<div class="centered-box">
-		<h1>Web Architecture Project</h1>
-		<!-- second non-form tag 1.2 -->
 		<img src="static/url_shortener.png" class="centered-image" alt="logo">
+		<!-- second non-form tag 1.2 -->
+		<h1>Web Architecture Project</h1>
 		<form class="form-horizontal" method="POST" action="shorts">
 		<!-- first text field with label 1.1-->
 		  <div class="col-lg-12" >
-		  <label for="long_url">Enter url to shorten<span class="label label-default"></span></label>
+		  <label for="long_url" class="label">Enter url to shorten<span class="label label-default"></span></label>
 		    <div class="input-group" >
 		      <input type="text" class="form-control"  placeholder="http://www.example.com" id="long_url" name="long_url" autocomplete="off">
 		      <span class="input-group-btn">
@@ -200,7 +200,7 @@
 		  <!-- second text field with label 1.1-->
 		  <div class="col-lg-12">
 		    <div class="input-group">
-		      <label> Customize url (Optional) <input type="text" class="form-control" placeholder="e.g. expl" id ="customized_url" name="short_str"  onkeyup="checkCharOnly(document.getElementById('customized_url').value);"></label>
+		      <label class="label"> Customize url (Optional) <input type="text" class="form-control" placeholder="e.g. expl" id ="customized_url" name="short_str"  onkeyup="checkCharOnly(document.getElementById('customized_url').value);"></label>
 		    </div>
 		  </div>
 		  <!-- forth non-form tag 1.2 -->
@@ -255,7 +255,7 @@
 						    var user = " <div class=\"member\">\
 						    <ul class=\"nav navbar-nav navbar-fixed-top \" >\
 						        <li class=\"dropdown\">\
-						          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-user pull-left\"></span>"+ name +"</a>\
+						          <a href=\"#\" class=\"dropdown-toggle user\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-user pull-left\"></span>"+ name +"</a>\
 						          <ul class=\"dropdown-menu\">\
 						          <div class=\"navbar-login\">\
 						          	<li><a href=\"./home\" id=\"home\">Home <span class=\"glyphicon glyphicon-home pull-right\"></span></a></li>\
