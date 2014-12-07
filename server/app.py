@@ -95,8 +95,8 @@ def get_ip(request):
 @app.route('/shorts/<short>', methods=['GET'])
 def redirect_short(short):
     latitude= [10,20,30]
-    longitude= [-80, -80, -80]
-    numAddresses = [50000, 2340000, 23409230]
+    longitude= [-100, -80, -80]
+    numAddresses = [50000, 300, 23402309]
     avgLat = sum(latitude)/len(latitude)
     avgLong = sum(longitude)/len(longitude)
     if short[len(short)-1] == '_':
@@ -117,7 +117,7 @@ def redirect_short(short):
         long_url= results[2]
         app.logger.debug("redirect to " + long_url)
         cur.execute("INSERT INTO clicks (short_id,ip_address) VALUES ('%s','%s')" % (short,get_ip(request),))
-        return redirect(long_url)
+        return flask.render_template('redirect.html', url=long_url);
     # return 404 if not found
     abort(404)
 
