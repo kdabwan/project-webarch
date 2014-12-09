@@ -10,10 +10,11 @@ from flask import abort
 import random
 import string
 import MySQLdb
-import csv
-import datetime
+
+import requests
 
 
+geo_ip_url = 'http://www.telize.com/geoip/'
 
 
 app = flask.Flask(__name__)
@@ -23,15 +24,6 @@ dbb = shelve.open("shorten.db")
 
 
 
-def write_log(request,val):
-    username = request.cookies.get('username','')
-    if username == '':
-        username = 'anonymous'
-    val = ["V"] + [username]+ val  +  ["1"] + [get_ip(request)]  + [datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")] + [request.headers["User-Agent"]]
-    with open('log.csv', 'a') as f:
-        writer = csv.writer(f,delimiter=',',quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(val)
-        f.close()
 ###
 # POST, GET method, stores url and shorten_url then returns result
 ###
@@ -99,33 +91,62 @@ def get_ip(request):
         return request.access_route[0]
 
 
+
+def get_geolocation(ip):
+    url = '{}/{}'.format(geo_ip_url, ip)
+    response = requests.get(url)
+    response.raise_for_status()
+    return response.json
+
 ###
 # For project purpose:
 # GET method, redirect to url
 ###
 @app.route('/shorts/<short>', methods=['GET'])
 def redirect_short(short):
-    val =  ["shorts.html/" + short]  
-    write_log(request,val)
     if short[len(short)-1] == '_':
         db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
         cur = db.cursor()
         cur.execute("SELECT * FROM clicks WHERE short_id = '%s'" % short[0:len(short)-1])
         short_stats = cur.fetchall()
-        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats,)
+        citiesDict = {}
+        for index in range(len(short_stats)):
+            point = str(short_stats[index][4])+','+str(short_stats[index][5])
+            if point in citiesDict:
+                citiesDict[point] += 1
+            else:
+                citiesDict[point] = 1
+        latitude = []
+        longitude = []
+        numAddresses = []
+        for city in citiesDict:
+            coordinates = city.split(",")
+            latitude.append(float(coordinates[0]))
+            longitude.append(float(coordinates[1]))
+            numAddresses.append(citiesDict[city])
+        avgLat = sum(latitude)/len(latitude)
+        avgLong = sum(longitude)/len(longitude)
+
+        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats, latitude= latitude, longitude= longitude, numAddresses = numAddresses*100000, avgLat = avgLat, avgLong = avgLong)
 
     # retrieve short string from url
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
     db.autocommit(True)
     cur = db.cursor()
     cur.execute("SELECT * FROM links WHERE short = '%s'" % short)
+
+
+
     # redirect if it's exist
     if cur.rowcount > 0:
         results = cur.fetchone()
         long_url= results[2]
         app.logger.debug("redirect to " + long_url)
-        cur.execute("INSERT INTO clicks (short_id,ip_address) VALUES ('%s','%s')" % (short,get_ip(request),))
-        return redirect(long_url)
+
+        ip_address = get_ip(request)
+        geodata = get_geolocation(ip_address)
+        cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata['latitude'],geodata['longitude']))
+        return flask.render_template('redirect.html', url=long_url);
     # return 404 if not found
     abort(404)
 
@@ -137,8 +158,6 @@ def redirect_short(short):
 ###
 @app.route('/links', methods=['GET'])
 def links():
-    val =  ["links.html"]  
-    write_log(request,val)
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
     db.autocommit(True)
     cur = db.cursor()
@@ -173,8 +192,6 @@ def get_user_info(cur,username):
 ###
 @app.route('/profile', methods=['POST','GET'])
 def profile():
-    val =  ["profile.html"]  
-    write_log(request,val)
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
     db.autocommit(True)
    
@@ -236,9 +253,10 @@ def profile():
 ###
 @app.route('/home', methods=['GET'])
 def home():
-    val =  ["home.html"]  
-    write_log(request,val)
-    return flask.render_template('home.html')
+    """Builds a template based on a GET request, with some default
+    arguements"""
+    return flask.render_template(
+            'home.html')
 
 
 @app.route('/home', methods=['POST'])
