@@ -191,7 +191,18 @@ p{
       margin-left: auto;
 
     }
-
+.dropdown-toggle{
+  color: white;
+}
+th{
+   color: rgba(0, 0, 0, 0.9);
+   font-size: 150%;
+   background: green;
+}
+td{
+   color: green;
+   font-size: 110%;
+}
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
     background-color: #6fb1c9;
