@@ -111,22 +111,21 @@ def redirect_short(short):
         short_stats = cur.fetchall()
         citiesDict = {}
         for index in range(len(short_stats)):
-            point = str(short_stats[index][4])+','+str(short_stats[index][5])
-            if point in citiesDict:
-                citiesDict[point] += 1
+            if len(short_stats[index][4]) == 0:
+                point = '37.9073,-122.282'
             else:
-                citiesDict[point] = 1
+                point = str(short_stats[index][4])+','+str(short_stats[index][5])
+                if point in citiesDict:
+                    citiesDict[point] += 1
+                else:
+                    citiesDict[point] = 1
         latitude = []
         longitude = []
         numAddresses = []
         for city in citiesDict:
             coordinates = city.split(",")
-            if len(coordinates[0]) == 0:
-                latitude.append(37.9073)
-                longitude.append(-122.282)
-            else:
-                latitude.append(float(coordinates[0]))
-                longitude.append(float(coordinates[1]))
+            latitude.append(float(coordinates[0]))
+            longitude.append(float(coordinates[1]))
             numAddresses.append(citiesDict[city])
         avgLat = sum(latitude)/len(latitude)
         avgLong = sum(longitude)/len(longitude)
