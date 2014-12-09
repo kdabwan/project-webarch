@@ -121,8 +121,12 @@ def redirect_short(short):
         numAddresses = []
         for city in citiesDict:
             coordinates = city.split(",")
-            latitude.append(float(coordinates[0]))
-            longitude.append(float(coordinates[1]))
+            if len(coordinates[0]) == 0:
+                latitude.append(37.9073)
+                longitude.append(-122.282)
+            else:
+                latitude.append(float(coordinates[0]))
+                longitude.append(float(coordinates[1]))
             numAddresses.append(citiesDict[city])
         avgLat = sum(latitude)/len(latitude)
         avgLong = sum(longitude)/len(longitude)
