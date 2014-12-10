@@ -10,9 +10,8 @@ from flask import abort
 import random
 import string
 import MySQLdb
-
+import json
 import requests
-
 
 geo_ip_url = 'http://www.telize.com/geoip/'
 
@@ -333,6 +332,13 @@ def wiki_put():
     wikipedia = request.form.get('url', 'http://en.wikipedia.org')
     dbb['wiki'] = wikipedia
     return "Stored wiki => " + wikipedia
+
+@app.route('/geo', methods=['POST'])
+def geo_post():
+	content = request.data
+	app.logger.debug('json output: ' + content)
+#	update db, need a unique key to update
+	return content
 
 ###
 # i253 Resource:

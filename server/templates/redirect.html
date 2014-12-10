@@ -13,20 +13,29 @@
                         //look up IP address
 
                         var onSuccess = function(location){
-                                console.log("Lookup Succesful: \n\n" + JSON.stringify(location, undefined, 4)
+			var object = JSON.stringify(location.location, undefined, 4);
+                                console.log("Lookup Succesful: \n\n" + object
                                 );
+				$.ajax({
+					type: 'POST',
+					url: '../geo',
+					data: object,
+					success: function(data) { console.log("Data posted succesffully")},
+					contentType: "application/json;charset=UTF-8",
+					dataType: 'json'
+				});
                         };
                         var onError = function(error){
                                 console.log("Error: \n\n" + JSON.stringify(error, undefined, 4)
                                 );
                         };
 
-		window.location.replace("{{url}}");
+		// window.location.replace("{{url}}");
                 $(document).ready(function () {
                 geoip2.city(onSuccess, onError);
-                // kickback to python n onSuccess() to write geoip2 response to db, which can be passed to the map.
-		window.location.replace("{{url}}");
-                        });		
+    		window.location.replace("{{url}}");        
+
+                });		
 	</script>
 	</body>
 </html>
