@@ -195,17 +195,25 @@ p{
   color: white;
 }
 th{
-   color: rgba(0, 0, 0, 0.9);
+   color: white;
    font-size: 150%;
-   background: green;
+   background: #276B84;
+   font-family: "Source Sans Pro",sans-serif;
 }
 td{
-   color: green;
+   color: white;
    font-size: 110%;
+   font-family: "Source Sans Pro",sans-serif;
+}
+.linksTable{
+  color: white;
+}
+h4{
+  font-family: "Source Sans Pro",sans-serif;
 }
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #6fb1c9;
+    background-color: #50879B;
 }
 
 @media screen and (max-width: 640px) {
@@ -283,10 +291,7 @@ td{
                   padding: 10px;
                   padding-bottom: 0px;
               }
-             tr{
-              color: white;
-              background: white;
-             }
+
    }           
 @media screen and (max-height: 640px) {
                .centered-box {
