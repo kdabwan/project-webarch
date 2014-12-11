@@ -15,6 +15,7 @@ import requests
 import datetime
 import csv
 
+#URL to fetch json of geolocation data
 geo_ip_url = 'http://www.telize.com/geoip/'
 
 
@@ -98,7 +99,9 @@ def get_ip(request):
     else:
         return request.access_route[0]
 
-
+####Use url of geolocation service with client ip address to get a json of
+#geolocation data for that address
+###
 
 def get_geolocation(ip):
     url = '{}/{}'.format(geo_ip_url, ip)
@@ -120,10 +123,15 @@ def redirect_short(short):
         cur.execute("SELECT * FROM clicks WHERE short_id = '%s'" % short[0:len(short)-1])
         short_stats = cur.fetchall()
         citiesDict = {}
+	#Iterate through each click
         for index in range(len(short_stats)):
+	#For clicks with no values for latitude, use Berkeley lat/long
             if len(short_stats[index][4]) == 0:
                 point = '37.9073,-122.282'
             else:
+		#Store into dictionary with lat,long string as keys and
+		#number of clicks as the values (Lat is 5th column in table, long is 6th)
+		#by incrementing number of clicks for a key
                 point = str(short_stats[index][4])+','+str(short_stats[index][5])
                 if point in citiesDict:
                     citiesDict[point] += 1
@@ -132,11 +140,16 @@ def redirect_short(short):
         latitude = []
         longitude = []
         numAddresses = []
+
+	#Split cityDict keys back into coordinates, and store latitude,
+	#Longitude, and num of instances at same index for 1 instance in three separate lists
         for city in citiesDict:
             coordinates = city.split(",")
             latitude.append(float(coordinates[0]))
             longitude.append(float(coordinates[1]))
             numAddresses.append(citiesDict[city])
+
+	#Calculate center of coordinates for map by averaging latitude and longitude.
         avgLat = sum(latitude)/len(latitude)
         avgLong = sum(longitude)/len(longitude)
 
@@ -156,6 +169,7 @@ def redirect_short(short):
         long_url= results[2]
         app.logger.debug("redirect to " + long_url)
 
+	#Get IP address and json of geolocationdata, so that latitude and longitude entries can be stored in db
         ip_address = get_ip(request)
         geodata = get_geolocation(ip_address)
         cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata['latitude'],geodata['longitude']))
