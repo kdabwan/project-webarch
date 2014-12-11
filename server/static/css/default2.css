@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200');
+@import url('http://fonts.googleapis.com/css?family=Cabin');
 
 html {
   color: rgba(0, 0, 0, 0.8);
@@ -20,13 +20,12 @@ html {
 
 }
 .centered-image {
-  width: 35%;
-  height: auto;
+  width: 25%;
+  height: 15%;
   display: block;
   margin-top: 1%;
   margin-left: auto;
   margin-right: auto 
-
 }
 .centered-qrcode {
   width: 15%;
@@ -38,7 +37,7 @@ html {
 .fine-print{
   font-size: 13px;
   margin-left: 20px;
-  color: #C2FF66;
+  color: red;
 }
 .error-print{
   font-size: 20px;
@@ -87,23 +86,19 @@ html {
   text-align: center;
 }
 .nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-    background:#C2FF66;
-    color: #276B84;
-}
-
-.user{
-  color:#C2FF66;
+    background:#5BB75B;
+    color: white;
 }
 .dropdown {
     margin-top: 10px;
     margin-left: 10px;
-    color:#C2FF66;
-    border:2px solid #C2FF66;
+    color:#5BB75B;
+    border:2px solid #5BB75B;
     border-radius:8px;
     width:180px;    
 }
 .dropdown-menu>li>a {
-    color:#C2FF66;
+    color:#5BB75B;
 }
 .dropdown ul.dropdown-menu {
     border-radius:7px;
@@ -145,75 +140,18 @@ html {
 body {
   font-size: 14px;
   line-height: 1.428571429;
-  color: white;
+  color: #276B84;
   background-color: #276B84;
 }
 h1{
-   margin-top: 10px;
-  font-family: "Source Sans Pro";
+   margin-top: 30px;
+  font-family: "Cabin";
   color: white;
   text-align: center;
-  font-weight: 200;
-  font-size: 32px;
-}
-h2, h3{
-  font-size: 200%;
-  color: white;
-  font-weight: bold;
-  font-family: "Source Sans Pro";
 }
 p{
   font-family:  Helvetica;
   text-align: left;
-}
-
-.label{
-  color: white;
-  font-family: "Source Sans Pro",sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34px;
-}
-
-.col-lg-12{
-  padding-top: 20px;
-  padding-bottom: 15px;
-}
-
-.row-spacer{
-    margin-top:40px;
-}
-
-#map-canvas {
-      width: 700px;
-      height: 500px;
-      margin-right: auto;
-      margin-left: auto;
-
-    }
-.dropdown-toggle{
-  color: white;
-}
-th{
-   color: white;
-   font-size: 150%;
-   background: #276B84;
-   font-family: "Source Sans Pro",sans-serif;
-}
-td{
-   color: white;
-   font-size: 110%;
-   font-family: "Source Sans Pro",sans-serif;
-}
-.linksTable{
-  color: white;
-}
-h4{
-  font-family: "Source Sans Pro",sans-serif;
-}
-
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #50879B;
 }
 
 @media screen and (max-width: 640px) {
@@ -229,16 +167,12 @@ h4{
                   h1{
                      margin-top: 10%;
                      font-size: 200%;
-                     font-weight: 400;
                   }
                   .fine-print{
                     font-size: 10px;
-                    font-family: "Source Sans Pro",sans-serif;
-                    height: 14px
                   }
                   .shorten-url{
-                  font-size: 100%;
-                  font-family: "Source Sans Pro",sans-serif;
+                font-size: 100%;
               }
               .shorten-url{
                     font-size: 160%;
@@ -291,7 +225,10 @@ h4{
                   padding: 10px;
                   padding-bottom: 0px;
               }
-
+             tr{
+              color: white;
+              background: white;
+             }
    }           
 @media screen and (max-height: 640px) {
                .centered-box {

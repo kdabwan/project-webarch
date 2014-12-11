@@ -10,8 +10,10 @@ from flask import abort
 import random
 import string
 import MySQLdb
+import json
+import requests
 
-
+geo_ip_url = 'http://www.telize.com/geoip/'
 
 
 app = flask.Flask(__name__)
@@ -88,6 +90,13 @@ def get_ip(request):
         return request.access_route[0]
 
 
+
+def get_geolocation(ip):
+    url = '{}/{}'.format(geo_ip_url, ip)
+    response = requests.get(url)
+    response.raise_for_status()
+    return response.json
+
 ###
 # For project purpose:
 # GET method, redirect to url
@@ -99,21 +108,48 @@ def redirect_short(short):
         cur = db.cursor()
         cur.execute("SELECT * FROM clicks WHERE short_id = '%s'" % short[0:len(short)-1])
         short_stats = cur.fetchall()
-        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats)
+        citiesDict = {}
+        for index in range(len(short_stats)):
+            if len(short_stats[index][4]) == 0:
+                point = '37.9073,-122.282'
+            else:
+                point = str(short_stats[index][4])+','+str(short_stats[index][5])
+                if point in citiesDict:
+                    citiesDict[point] += 1
+                else:
+                    citiesDict[point] = 1
+        latitude = []
+        longitude = []
+        numAddresses = []
+        for city in citiesDict:
+            coordinates = city.split(",")
+            latitude.append(float(coordinates[0]))
+            longitude.append(float(coordinates[1]))
+            numAddresses.append(citiesDict[city])
+        avgLat = sum(latitude)/len(latitude)
+        avgLong = sum(longitude)/len(longitude)
+
+        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats, latitude= latitude, longitude= longitude, numAddresses = numAddresses*100000, avgLat = avgLat, avgLong = avgLong)
 
     # retrieve short string from url
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
     db.autocommit(True)
     cur = db.cursor()
     cur.execute("SELECT * FROM links WHERE short = '%s'" % short)
+
+
+
     # redirect if it's exist
     if cur.rowcount > 0:
         results = cur.fetchone()
         long_url= results[2]
         app.logger.debug("redirect to " + long_url)
-        cur.execute("INSERT INTO clicks (short_id,ip_address) VALUES ('%s','%s')" % (short,get_ip(request),))
-        return redirect(long_url)
-    # return 404 if not found
+
+        ip_address = get_ip(request)
+        geodata = get_geolocation(ip_address)
+        cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata['latitude'],geodata['longitude']))
+	return redirect(long_url)    
+# return 404 if not found
     abort(404)
 
 
@@ -224,6 +260,7 @@ def home():
     return flask.render_template(
             'home.html')
 
+
 @app.route('/home', methods=['POST'])
 def home_post():
     db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
@@ -295,6 +332,7 @@ def wiki_put():
     wikipedia = request.form.get('url', 'http://en.wikipedia.org')
     dbb['wiki'] = wikipedia
     return "Stored wiki => " + wikipedia
+
 
 ###
 # i253 Resource:

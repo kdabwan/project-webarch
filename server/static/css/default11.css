@@ -145,7 +145,7 @@ html {
 body {
   font-size: 14px;
   line-height: 1.428571429;
-  color: white;
+  color: #276B84;
   background-color: #276B84;
 }
 h1{
@@ -155,12 +155,6 @@ h1{
   text-align: center;
   font-weight: 200;
   font-size: 32px;
-}
-h2, h3{
-  font-size: 200%;
-  color: white;
-  font-weight: bold;
-  font-family: "Source Sans Pro";
 }
 p{
   font-family:  Helvetica;
@@ -178,42 +172,6 @@ p{
 .col-lg-12{
   padding-top: 20px;
   padding-bottom: 15px;
-}
-
-.row-spacer{
-    margin-top:40px;
-}
-
-#map-canvas {
-      width: 700px;
-      height: 500px;
-      margin-right: auto;
-      margin-left: auto;
-
-    }
-.dropdown-toggle{
-  color: white;
-}
-th{
-   color: white;
-   font-size: 150%;
-   background: #276B84;
-   font-family: "Source Sans Pro",sans-serif;
-}
-td{
-   color: white;
-   font-size: 110%;
-   font-family: "Source Sans Pro",sans-serif;
-}
-.linksTable{
-  color: white;
-}
-h4{
-  font-family: "Source Sans Pro",sans-serif;
-}
-
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #50879B;
 }
 
 @media screen and (max-width: 640px) {
@@ -291,7 +249,10 @@ h4{
                   padding: 10px;
                   padding-bottom: 0px;
               }
-
+             tr{
+              color: white;
+              background: white;
+             }
    }           
 @media screen and (max-height: 640px) {
                .centered-box {
