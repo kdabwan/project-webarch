@@ -148,8 +148,8 @@ def redirect_short(short):
         ip_address = get_ip(request)
         geodata = get_geolocation(ip_address)
         cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata['latitude'],geodata['longitude']))
-        return flask.render_template('redirect.html', url=long_url);
-    # return 404 if not found
+	return redirect(long_url)    
+# return 404 if not found
     abort(404)
 
 
@@ -333,12 +333,6 @@ def wiki_put():
     dbb['wiki'] = wikipedia
     return "Stored wiki => " + wikipedia
 
-@app.route('/geo', methods=['POST'])
-def geo_post():
-	content = request.data
-	app.logger.debug('json output: ' + content)
-#	update db, need a unique key to update
-	return content
 
 ###
 # i253 Resource:
