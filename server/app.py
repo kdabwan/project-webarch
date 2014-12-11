@@ -12,6 +12,8 @@ import string
 import MySQLdb
 import json
 import requests
+import datetime
+import csv
 
 geo_ip_url = 'http://www.telize.com/geoip/'
 
