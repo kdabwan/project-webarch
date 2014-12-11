@@ -21,8 +21,15 @@ app.debug = True
 
 dbb = shelve.open("shorten.db")
 
-
-
+def write_log(type_log,request,val):
+    username = request.cookies.get('username','')
+    if username == '':
+        username = 'anonymous'
+    val = type_log + [username]+ val  +  ["1"] + [get_ip(request)]  + [datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")] + [request.headers["User-Agent"]]
+    with open('log.csv', 'a') as f:
+        writer = csv.writer(f,delimiter=',',quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(val)
+        f.close()
 ###
 # POST, GET method, stores url and shorten_url then returns result
 ###
@@ -49,7 +56,7 @@ def create_short(username):
     short_str = request.form.get("short_str").encode('utf-8')
     # automaticlly generate short string when it's not sent by form
     # Extra credit
-    db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
+    db = MySQLdb.connect(host="localhost", user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
     db.autocommit(True)
     cur = db.cursor()
     cur.execute("SELECT * FROM links WHERE short = '%s'" % short_str)
@@ -103,8 +110,10 @@ def get_geolocation(ip):
 ###
 @app.route('/shorts/<short>', methods=['GET'])
 def redirect_short(short):
+    val =  ["shorts.html/" + short]  
+    write_log(["V"],request,val)
     if short[len(short)-1] == '_':
-        db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
+        db = MySQLdb.connect(host="localhost", user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
         cur = db.cursor()
         cur.execute("SELECT * FROM clicks WHERE short_id = '%s'" % short[0:len(short)-1])
         short_stats = cur.fetchall()
@@ -132,7 +141,7 @@ def redirect_short(short):
         return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats, latitude= latitude, longitude= longitude, numAddresses = numAddresses*100000, avgLat = avgLat, avgLong = avgLong)
 
     # retrieve short string from url
-    db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
+    db = MySQLdb.connect(host="localhost", user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
     db.autocommit(True)
     cur = db.cursor()
     cur.execute("SELECT * FROM links WHERE short = '%s'" % short)
@@ -160,7 +169,9 @@ def redirect_short(short):
 ###
 @app.route('/links', methods=['GET'])
 def links():
-    db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
+    val =  ["links.html"]  
+    write_log(["V"],request,val)
+    db = MySQLdb.connect(host="localhost", user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
     db.autocommit(True)
     cur = db.cursor()
     username = request.cookies.get('username')
@@ -194,7 +205,9 @@ def get_user_info(cur,username):
 ###
 @app.route('/profile', methods=['POST','GET'])
 def profile():
-    db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
+    val =  ["profile.html"]  
+    write_log(["V"],request,val)
+    db = MySQLdb.connect(host="localhost", user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
     db.autocommit(True)
    
     cur = db.cursor()
@@ -255,17 +268,17 @@ def profile():
 ###
 @app.route('/home', methods=['GET'])
 def home():
-    """Builds a template based on a GET request, with some default
-    arguements"""
-    return flask.render_template(
-            'home.html')
+    val =  ["home.html"]  
+    write_log(["V"],request,val)
+    return flask.render_template('home.html')
 
 
 @app.route('/home', methods=['POST'])
 def home_post():
-    db = MySQLdb.connect(host="johnny.heliohost.org", user="kemosaif_info253", passwd="info253",db="kemosaif_info253") # database info
+    db = MySQLdb.connect(host="localhost", port=3306, user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
     cur = db.cursor()
     sign_in_up = request.form.get("sign").encode('utf-8')
+    val =  ["home.html"] 
     if sign_in_up == 'signup': # sign up request
         # collect user data
         firstname = request.form.get("firstname").encode('utf-8')
@@ -280,12 +293,14 @@ def home_post():
             db.commit()
             cur.close()
             db.close()
+            write_log(["U"],request,val)
             return flask.render_template('home.html',signup_success="Success")
         except:
             db.rollback()
             cur.close()
             db.close()
-            return flask.render_template('home.html')
+            write_log(["Ux"],request,val)
+            return "Error: unable to fecth data!"
     elif sign_in_up == 'signin': # sign in request
         # collect user data
         username = request.form.get("username","").encode('utf-8')
@@ -303,12 +318,14 @@ def home_post():
                 resp.set_cookie('name', name,10*24*60*60)
                 cur.close()
                 db.close()
+                write_log(["S"],request,val)
                 return resp
             else:
                 cur.close()
                 db.close()
                 return flask.render_template('home.html',signin_fail="Fail")
         except:
+            write_log(["Sx"],request,val)
             return "Error: unable to fecth data!"
 
 
