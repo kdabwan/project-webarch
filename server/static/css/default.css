@@ -47,8 +47,8 @@ html {
 }
 .shorten-url
 {
-    font-size: 160%;
-    color: green;
+    font-size: 170%;
+    color: black;
     font-weight: bold;
     width:300px;
     height:400px;
@@ -58,6 +58,12 @@ html {
     white-space: -o-pre-wrap; /* Opera 7 */    
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 
+}
+.shorten-url:hover{
+  color: white;
+}
+.shorten-url:visited{
+  color: black;
 }
 .modal-header-success {
     color:#fff;
@@ -162,11 +168,17 @@ h2, h3{
   font-weight: bold;
   font-family: "Source Sans Pro";
 }
+
 p{
   font-family:  Helvetica;
   text-align: left;
 }
-
+.message{
+  font-size: 150%;
+  color: black;
+  font-weight: bold;
+  font-family: "Source Sans Pro";
+}
 .label{
   color: white;
   font-family: "Source Sans Pro",sans-serif;
@@ -195,20 +207,18 @@ p{
   color: white;
 }
 th{
-   color: rgba(0, 0, 0, 0.9);
+   color: rgba(0, 0, 0, 0.8);
    font-size: 150%;
-   background: green;
+   background: rgba(0.7, 0.3, 0.5, 0.5);
 }
 td{
    color: green;
    font-size: 110%;
+   background-color: white;
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #6fb1c9;
-}
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 760px) {
                .centered-box {
                   width: 95%;
                     position: fixed;
@@ -232,26 +242,17 @@ td{
                   font-size: 100%;
                   font-family: "Source Sans Pro",sans-serif;
               }
-              .shorten-url{
-                    font-size: 160%;
-                    color: green;
-                    font-weight: bold;
-                    width:300px;
-                    height:400px;
-                    white-space: pre-wrap; /* css-3 */    
-                    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-                    white-space: -pre-wrap; /* Opera 4-6 */    
-                    white-space: -o-pre-wrap; /* Opera 7 */    
-                    word-wrap: break-word; /* Internet Explorer 5.5+ */
-
-                }
+              
                 .dropdown {
+                	margin-left: 20px;
                     width:170px; 
                     margin-right: 20px;
-                    background: white;  
+                    background: #276B84; 
+                    color: white; 
                 }
                 
                 .dropdown .dropdown-menu:before {
+                	color:white;
                     border-bottom: 0px solid black;
                     border-right: 0px solid black;
                     border-left: 0px solid black;
@@ -261,7 +262,7 @@ td{
                     z-index: 10;
                 }
                 .dropdown .dropdown-menu:after {
-              
+              color:white;
                   border-bottom: 0px solid black;
                     border-right: 0px solid black;
                     border-left: 0px solid black;
@@ -272,25 +273,33 @@ td{
               }
                
               .dropdown-menu{
-            
-              color:white;
-              font-size: 10px;
+              	font-size: 10px;
+              	color:white;
               }
               .navbar-login
               {
+              	color:white;
                 margin-left: 20px;
                   width: 142px;
                   padding: 10px;
                   padding-bottom: 0px;
+
               }
-             tr{
-              color: white;
-              background: white;
-             }
+              .dropdown-toggle{
+				  color: white;
+				}
+				.dropdown-menu>li>a {
+				    color:white;
+				}
+				.li-menu{
+					color: white;
+				}
+           
    }           
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 1330px) {
                .centered-box {
                  top: 40%;
                 }
                 .sign-area {
-                  margin-top: 
+                  margin-top:  10px;
+              }
