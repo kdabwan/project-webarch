@@ -217,6 +217,16 @@ td{
    background-color: white;
 }
 
+.linksTable{
+  color: white;
+}
+h4{
+  font-family: "Source Sans Pro",sans-serif;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #50879B;
+}
 
 @media screen and (max-width: 760px) {
                .centered-box {
@@ -294,8 +304,8 @@ td{
 				.li-menu{
 					color: white;
 				}
+		
            
-   }           
 @media screen and (max-height: 1330px) {
                .centered-box {
                  top: 40%;

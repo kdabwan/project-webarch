@@ -18,7 +18,71 @@
 		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.4.0/bootstrap-table.min.js"></script>
-  
+		<script src="http:////js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+
+
+                        //alert on geoip API
+
+                        var onSuccess = function(location){
+                                console.log("Lookup Successful: \n\n" + JSON.stringify(location, undefined, 4)
+                                );
+                        };
+                        var onError = function(error){
+                                console.log("Error: \n\n" + JSON.stringify(error, undefined, 4)
+                                );
+                        };			
+			// This example creates circles on the map, representing
+			// populations in North America.
+
+			// First, create an object containing LatLng and population for each city.
+			var citymap = {};
+
+			for (i = 0; i < {{latitude}}.length; i++) {
+				citymap[i] = {
+				  center: new google.maps.LatLng({{latitude}}[i], {{longitude}}[i]),
+				  population: {{numAddresses}}[i]
+				};
+			}
+
+
+
+
+			var cityCircle;
+
+			function initialize() {
+			  // Create the map.
+			  var mapOptions = {
+			    zoom: 4,
+			    center: new google.maps.LatLng({{avgLat}}, {{avgLong}}),
+			    mapTypeId: google.maps.MapTypeId.TERRAIN
+			  };
+
+			  var map = new google.maps.Map(document.getElementById('map-canvas'),
+			      mapOptions);
+
+			  // Construct the circle for each value in citymap.
+			  // Note: We scale the area of the circle based on the population.
+			  for (var city in citymap) {
+			    var populationOptions = {
+			      strokeColor: '#FF0000',
+			      strokeOpacity: 0.8,
+			      strokeWeight: 2,
+			      fillColor: '#FF0000',
+			      fillOpacity: 0.35,
+			      map: map,
+			      center: citymap[city].center,
+			      radius: Math.sqrt(citymap[city].population) * 100
+			    };
+			    // Add the circle for this city to the map.
+			    cityCircle = new google.maps.Circle(populationOptions);
+			  }
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
 	</head>
 	<body>
 			<div class="content">
@@ -37,7 +101,7 @@
 				    <thead>
 					    <tr>
 					        <th >IP address</th>
-					        <th >Click Date/Time</th>
+					        <th >Click Data/Time</th>
 					        
 						 </tr>
 					  </thead>
@@ -50,12 +114,16 @@
 					            {% endfor %}
 					        </tbody>
 				</table>
-				
+				<div class = "row-spacer">
+			   		<div id="map-canvas"></div>
+			   	</div>
 			</div>
 
 		</div>
 		<script >
 				$(document).ready(function() {
+				//find geoIP
+				geoip2.city(onSuccess, onError, undefined);
 				// logon user sees registered user menu, sign in button otherwise
 				if($.cookie('username') === null || $.cookie('username') === "" 
 					|| $.cookie('username') === "null" || $.cookie('username') === undefined)
