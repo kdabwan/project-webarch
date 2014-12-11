@@ -28,7 +28,7 @@ def write_log(type_log,request,val):
     if username == '':
         username = 'anonymous'
     val = type_log + [username]+ val  +  ["1"] + [get_ip(request)]  + [datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")] + [request.headers["User-Agent"]]
-    with open('./server/log.csv', 'a') as f:
+    with open('log.csv', 'a') as f:
         writer = csv.writer(f,delimiter=',',quotechar='"', quoting=csv.QUOTE_MINIMAL)
         writer.writerow(val)
         f.close()
