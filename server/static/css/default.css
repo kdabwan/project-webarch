@@ -11,7 +11,7 @@ html {
 
 }
 .centered-box {
-  width: 60%;
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -196,11 +196,11 @@ p{
     margin-top:40px;
 }
 
-#map-canvas {
-      width: 700px;
-      height: 500px;
-      margin-right: auto;
-      margin-left: auto;
+.map {
+  margin-top: 10px;
+      width: 100%;
+      height: 200%;
+      position: absolute;
 
     }
 .dropdown-toggle{
@@ -217,16 +217,6 @@ td{
    background-color: white;
 }
 
-.linksTable{
-  color: white;
-}
-h4{
-  font-family: "Source Sans Pro",sans-serif;
-}
-
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #50879B;
-}
 
 @media screen and (max-width: 760px) {
                .centered-box {
@@ -254,7 +244,7 @@ h4{
               }
               
                 .dropdown {
-                	margin-left: 20px;
+                  margin-left: 20px;
                     width:170px; 
                     margin-right: 20px;
                     background: #276B84; 
@@ -262,7 +252,7 @@ h4{
                 }
                 
                 .dropdown .dropdown-menu:before {
-                	color:white;
+                  color:white;
                     border-bottom: 0px solid black;
                     border-right: 0px solid black;
                     border-left: 0px solid black;
@@ -283,12 +273,12 @@ h4{
               }
                
               .dropdown-menu{
-              	font-size: 10px;
-              	color:white;
+                font-size: 10px;
+                color:white;
               }
               .navbar-login
               {
-              	color:white;
+                color:white;
                 margin-left: 20px;
                   width: 142px;
                   padding: 10px;
@@ -296,16 +286,16 @@ h4{
 
               }
               .dropdown-toggle{
-				  color: white;
-				}
-				.dropdown-menu>li>a {
-				    color:white;
-				}
-				.li-menu{
-					color: white;
-				}
-		
+          color: white;
+        }
+        .dropdown-menu>li>a {
+            color:white;
+        }
+        .li-menu{
+          color: white;
+        }
            
+   }           
 @media screen and (max-height: 1330px) {
                .centered-box {
                  top: 40%;

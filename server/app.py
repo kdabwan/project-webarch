@@ -119,36 +119,13 @@ def redirect_short(short):
         cur = db.cursor()
         cur.execute("SELECT * FROM clicks WHERE short_id = '%s'" % short[0:len(short)-1])
         short_stats = cur.fetchall()
-        citiesDict = {}
-        for index in range(len(short_stats)):
-            if len(short_stats[index][4]) == 0:
-                point = '37.9073,-122.282'
-            else:
-                point = str(short_stats[index][4])+','+str(short_stats[index][5])
-                if point in citiesDict:
-                    citiesDict[point] += 1
-                else:
-                    citiesDict[point] = 1
-        latitude = []
-        longitude = []
-        numAddresses = []
-        for city in citiesDict:
-            coordinates = city.split(",")
-            latitude.append(float(coordinates[0]))
-            longitude.append(float(coordinates[1]))
-            numAddresses.append(citiesDict[city])
-        avgLat = sum(latitude)/len(latitude)
-        avgLong = sum(longitude)/len(longitude)
-
-        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats, latitude= latitude, longitude= longitude, numAddresses = numAddresses*100000, avgLat = avgLat, avgLong = avgLong)
+        return flask.render_template('stats.html',short_url = short[0:len(short)-1], number_clicks = len(short_stats),stats = short_stats)
 
     # retrieve short string from url
     db = MySQLdb.connect(host="localhost", user="ashwin_chandak", passwd="ivB2hnBX",db="ashwin_chandak") # database info
     db.autocommit(True)
     cur = db.cursor()
     cur.execute("SELECT * FROM links WHERE short = '%s'" % short)
-
-
 
     # redirect if it's exist
     if cur.rowcount > 0:
@@ -158,6 +135,7 @@ def redirect_short(short):
 
         ip_address = get_ip(request)
         geodata = get_geolocation(ip_address)
+        app.logger.debug(geodata['latitude'] + "," +  geodata['longitude'])
         cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata['latitude'],geodata['longitude']))
 	return redirect(long_url)    
 # return 404 if not found
