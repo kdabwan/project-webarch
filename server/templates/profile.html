@@ -13,7 +13,7 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
   <script src="./static/bootstrap/js/jquery.cookie.js"></script>
-  
+
 </head>
 <body>
   <div class="content">
@@ -21,7 +21,7 @@
     <div class="sign-area"  id="sign-area">
     </div>
 
-    <div class="fieldscentered-box" >
+    <div class="fields centered-box" >
       <h4>Your Profile:</h4>
       <form class="form-horizontal" method="POST">
         <fieldset>
@@ -49,7 +49,7 @@
               <input id="email" name="email" class="form-control input-large" type="email"   required="" value='{{email}}'>
             </div>
           </div>
-          
+
           <!-- Password input-->
           <div class="control-group">
             <label class="control-label" for="password">Current password:</label>
@@ -66,7 +66,7 @@
               <em>1-8 Characters</em>
             </div>
           </div>
-          
+
           <!-- Text input-->
           <div class="control-group">
             <label class="control-label" for="reenterpassword">Re-Enter new password:</label>
@@ -74,7 +74,7 @@
               <input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  >
             </div>
           </div>
-          
+
           <!-- Button -->
           <div class="control-group">
             <label class="control-label" for="confirmsignup"></label>
@@ -85,10 +85,10 @@
         </fieldset>
       </form>
     </div>
-    
-    
-    
-    
+
+
+
+
     <!-- Dialog-->
     <!-- Modal -->
     <div class="modal fade bs-modal-sm" id="success" tabindex="-1" role="dialog"  aria-hidden="true">
@@ -125,10 +125,10 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
     
-    
-    
-    
+
+
   </div>
   <script>
     $(document).ready(function() {
@@ -149,7 +149,7 @@
         } else {
           document.getElementById("shortenBTN").disabled = true;
         };
-        
+
       });
 
 {% block body %}
@@ -186,8 +186,8 @@
       </div>";
       $('#sign-area').append( user);
     }
-    
-    
+
+
   });
 </script>
 </body>

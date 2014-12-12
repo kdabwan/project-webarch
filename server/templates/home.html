@@ -16,7 +16,7 @@
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js" type="text/javascript"></script>
 </head>
 <body>
-	<div class="content">
+<div class="content" >
 		<!--Sign in/up business starts here .............................-->
 		<div class="sign-area"  id="sign-area">
 		</div>
@@ -34,11 +34,11 @@
 					</div>
 					<div class="modal-body">
 						<div id="myTabContent" class="tab-content">
-							
+
 							<div class="tab-pane fade active in" id="signin-form">
 								<form class="form-horizontal" method="POST">
 									<fieldset>
-										
+
 										<!-- Sign In Form -->
 										<!-- Text input-->
 										<div class="control-group">
@@ -93,7 +93,7 @@
 												<input id="email" name="email" class="form-control input-large" type="email" placeholder="name@example.com" required="">
 											</div>
 										</div>
-										
+
 										<!-- Text input-->
 										<div class="control-group">
 											<label class="control-label" for="username">Username:</label>
@@ -101,7 +101,7 @@
 												<input id="username" name="username" class="form-control input-large" type="text" placeholder="username"  required="" pattern=".{5,}" title="5 characters minimum">
 											</div>
 										</div>
-										
+
 										<!-- Password input-->
 										<div class="control-group">
 											<label class="control-label" for="password">Password:</label>
@@ -110,7 +110,7 @@
 												<em>1-8 Characters</em>
 											</div>
 										</div>
-										
+
 										<!-- Text input-->
 										<div class="control-group">
 											<label class="control-label" for="reenterpassword">Re-Enter Password:</label>
@@ -118,7 +118,7 @@
 												<input id="reenterpassword" class="form-control input-large" name="reenterpassword" type="password" placeholder="********"  required="" pattern=".{6,}" title="6 characters minimum">
 											</div>
 										</div>
-										
+
 										<!-- Button -->
 										<div class="control-group">
 											<label class="control-label" for="confirmsignup"></label>
@@ -132,9 +132,9 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						
+
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						
+
 					</div>
 				</div>
 			</div>
@@ -206,7 +206,7 @@
 				<!-- forth non-form tag 1.2 -->
 				<!--  <p class="fine-print">* only valid string</p>-->
 				<p class="fine-print"><b id='errorMessage'></b> </p> 
-				
+
 			</form>
 		</div>
 	</div>
@@ -229,7 +229,7 @@
 				} else {
 					document.getElementById("shortenBTN").disabled = true;
 				};
-				
+
 			});
 
 {% block body %}
@@ -279,8 +279,8 @@
 							location.reload(true);
 							return false; 
 						});
-						
-						
+
+
 						
 					});
 </script>
