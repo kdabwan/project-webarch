@@ -15,9 +15,6 @@ import requests
 import datetime
 import csv
 
-#URL to fetch json of geolocation data
-geo_ip_url = 'http://www.telize.com/geoip/'
-
 
 app = flask.Flask(__name__)
 app.debug = True
