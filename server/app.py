@@ -139,8 +139,7 @@ def redirect_short(short):
 	#Get IP address and json of geolocationdata, so that latitude and longitude entries can be stored in db
         ip_address = get_ip(request)
         geodata = get_geolocation(ip_address)
-        app.logger.debug(geodata['latitude'] + "," +  geodata['longitude'])
-        cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata['latitude'],geodata['longitude']))
+        cur.execute("INSERT INTO clicks (`short_id`,`ip_address`,`lat`,`long`) VALUES ('%s','%s',%s,%s)" % ( short,ip_address,geodata.get('latitude','NONE'),geodata.get('longitude','NONE')))
 	return redirect(long_url)    
 # return 404 if not found
     abort(404)

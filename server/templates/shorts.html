@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<meta charset="utf-8">
-		<title>Web Architecture Project - Shorten URL</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css">
-		<link rel="stylesheet" href="./static/css/default.css">
+<head>
+	<meta charset="utf-8">
+	<title>Web Architecture Project - Shorten URL</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css">
+	<link rel="stylesheet" href="./static/css/default.css">
 
 
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-		<script src="./static/bootstrap/js/jquery.cookie.js"></script>
-		<script src="./static/bootstrap/bootstrap-table.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+	<script src="./static/bootstrap/js/jquery.cookie.js"></script>
+	<script src="./static/bootstrap/bootstrap-table.js"></script>
 
-		<script src="./static/bootstrap/js/jquery.qrcode-0.11.0.min.js"></script>
-		
-		
-	</head>
-	<body>
-		<div class="content">
+	<script src="./static/bootstrap/js/jquery.qrcode-0.11.0.min.js"></script>
+
+
+</head>
+<body>
+	<div class="content">
 		<div class="sign-area" id="sign-area">
 		</div>
 		<div class="centered-box">
-		<h1>Web Architecture Project</h1>
-		<img src="static/url_shortener.png" class="centered-image" alt="logo">
-		
+			<h1>Web Architecture Project</h1>
+			<img src="static/url_shortener.png" class="centered-image" alt="logo">
+
 			<h2>Shorten url:</h2>
 			<a href="" class="shorten-url" id="short_url">{{url}}</a>
 			<p class="error-print">{{error}}</p>
 			<div id="qrcode" class="qrcode"></div>
-		
-		
 		</div>
-		</div>
-		<script type="text/javascript">
-				$(document).ready(function() {
-					var url = $("#short_url").text();
-					if (url != "") {
-						$("#short_url").attr("href", url);
-					$("#qrcode").qrcode(
-				        {
-				            text: url
-				        }
-					
-					)
-					};
-					
-				    
-				    if($.cookie('username') === null || $.cookie('username') === "" 
-					|| $.cookie('username') === "null" || $.cookie('username') === undefined)
-						{
-						     
-						}
-						else
-						{
-							var name= $.cookie('name');
-						    var user = " <div class=\"member\">\
-						    <ul class=\"nav navbar-nav navbar-fixed-top \" >\
-						        <li class=\"dropdown\">\
-						          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-user pull-left\"></span>"+ name +"</a>\
-						          <ul class=\"dropdown-menu\">\
-						          <div class=\"navbar-login\">\
-						          	<li><a href=\"./home\" id=\"home\">Home <span class=\"glyphicon glyphicon-home pull-right\"></span></a></li>\
-						            </div>\
-						          </ul>\
-						        </li>\
-						      </ul>\
-						      </div>";
-						      $('#sign-area').append( user);
-						}
-		   
-				});
-			</script>
-	</body>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var url = $("#short_url").text();
+			if (url != "") {
+				$("#short_url").attr("href", url);
+				$("#qrcode").qrcode(
+				{
+					text: url
+				}
+
+				)
+			};
+
+
+			if($.cookie('username') === null || $.cookie('username') === "" 
+				|| $.cookie('username') === "null" || $.cookie('username') === undefined)
+			{
+
+			}
+			else
+			{
+				var name= $.cookie('name');
+				var user = " <div class=\"member\">\
+				<ul class=\"nav navbar-nav navbar-fixed-top \" >\
+					<li class=\"dropdown\">\
+						<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-user pull-left\"></span>"+ name +"</a>\
+						<ul class=\"dropdown-menu\">\
+							<div class=\"navbar-login\">\
+								<li><a href=\"./home\" id=\"home\">Home <span class=\"glyphicon glyphicon-home pull-right\"></span></a></li>\
+							</div>\
+						</ul>\
+					</li>\
+				</ul>\
+			</div>";
+			$('#sign-area').append( user);
+		}
+
+	});
+	</script>
+</body>
 </html>
