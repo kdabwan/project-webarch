@@ -15,6 +15,7 @@ import requests
 import datetime
 import csv
 
+#URL to fetch json of geolocation data
 geo_ip_url = 'http://www.telize.com/geoip/'
 
 
@@ -98,7 +99,9 @@ def get_ip(request):
     else:
         return request.access_route[0]
 
-
+####Use url of geolocation service with client ip address to get a json of
+#geolocation data for that address
+###
 
 def get_geolocation(ip):
     url = '{}/{}'.format(geo_ip_url, ip)
@@ -133,6 +136,7 @@ def redirect_short(short):
         long_url= results[2]
         app.logger.debug("redirect to " + long_url)
 
+	#Get IP address and json of geolocationdata, so that latitude and longitude entries can be stored in db
         ip_address = get_ip(request)
         geodata = get_geolocation(ip_address)
         app.logger.debug(geodata['latitude'] + "," +  geodata['longitude'])
