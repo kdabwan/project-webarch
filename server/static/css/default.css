@@ -48,7 +48,7 @@ html {
 .shorten-url
 {
   font-size: 170%;
-  color: black;
+  color: #C2FF66;
   font-weight: bold;
   width:300px;
   height:400px;
@@ -61,9 +61,6 @@ html {
 }
 .shorten-url:hover{
   color: white;
-}
-.shorten-url:visited{
-  color: black;
 }
 .modal-header-success {
   color:#fff;
@@ -215,7 +212,7 @@ p{
 }
 
 th{
- color: rgba(0, 0, 0, 0.8);
+ color: #C2FF66;
  font-size: 150%;
 }
 td{
